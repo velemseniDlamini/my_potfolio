@@ -204,59 +204,6 @@
     background: #37b3ed;
   }
   /*--------------------------------------------------------------
-  # Services
-  --------------------------------------------------------------*/
-  .services .icon-box {
-    margin-bottom: 20px;
-  }
-  
-  .services .icon {
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 54px;
-    height: 54px;
-    background: #0073aa;
-    border-radius: 50%;
-    transition: 0.5s;
-    border: 1px solid #0073aa;
-  }
-  
-  .services .icon i {
-    color: #fff;
-    font-size: 24px;
-  }
-  
-  .services .icon-box:hover .icon {
-    background: #fff;
-  }
-  
-  .services .icon-box:hover .icon i {
-    color: #0073aa;
-  }
-  
-  .services .title {
-    margin-left: 80px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-  
-  .services .title a {
-    color: #343a40;
-  }
-  
-  .services .title a:hover {
-    color: #0073aa;
-  }
-  
-  .services .description {
-    margin-left: 80px;
-    line-height: 24px;
-    font-size: 14px;
-  }
-  /*--------------------------------------------------------------
   # Skills
   --------------------------------------------------------------*/
   .skills .progress {
@@ -367,7 +314,7 @@
     min-height: 100vh;
     height: 50vh;
     width: 100%;
-    background: url(/assets/img/my_self.jpg);
+    background: url();
     background-size: cover;
     background-position: top;
     position: relative;
@@ -494,8 +441,17 @@
     will-change: transform;
     transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05, 1.05, 1.05) ;
   }
-  
-  
+  @media (max-width: 768px) {
+    .home {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .home-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 </style>
 
     <title>My potfolio</title>
@@ -506,8 +462,7 @@
         <ul class="nav nav-pills">
           <li class="nav-item">
             <a class="nav-link" href="#scrollspyHeading1">Who am I</a>
-          </li>
-          
+          </li> 
           <li class="nav-item">
             <a class="nav-link" href="#scrollspyHeading3">Education & Cert</a>
           </li>
@@ -523,7 +478,6 @@
          
         </ul>
       </nav>
-     
       <section class="home" id="home">
         <div class="home-text">
           <h3>Hello, I'm</h3>
@@ -533,14 +487,11 @@
               dedicated to my work.</h6>
               <div class="social">
                   <a href="velemseni-dlamini-11965823a"><i class="fa-brands fa-linkedin"></i></a>
-                  <a href="https://github.com/velemseniDlamini"><i class="fa-brands fa-github"></i></a>
-                 
-              </div>
-             
+                  <a href="https://github.com/velemseniDlamini"><i class="fa-brands fa-github"></i></a>   
+              </div>    
         </div>
         <div class="home-img"></div>
-       </section>
-             
+       </section>     
         <h4 id="scrollspyHeading3">Education & Certifications</h4>
     <section id="resume" class="resume">
       <div class="container">
@@ -551,11 +502,20 @@
               <h4>Dip Computer Systems Engineering</h4>
               <h5>2021 - 2024</h5>
               <p><em><a rel="noopener" href="https://www.tut.ac.za/" target="_blank">Tshwane University of Technology</a></em></p>
-              <p>Faculty of ICT</p>
-              
-              
+              <p>Computer Systems Engineering (CSE) combines principles from computer science and electrical engineering to design, develop, and maintain computing systems and hardware. It encompasses areas like embedded systems, hardware-software integration, computer architecture, networking, and cybersecurity.</p>
             </div>
             <h3 class="resume-title">Certifications</h3>
+            <div class="resume-item">
+              <h4>Flutter & ML : Train Tensorflow Lite models for Flutter Apps</h4>
+              <h5>4 week - 2024</h5>
+              <p><em>Certified by Udemy
+                </em></p>
+              <ul>
+                <li>Credential ID: <a rel="noopener"
+                    href="https://www.udemy.com/certificate/UC-2b31694b-781a-4ee0-bbc2-9cc3fe8c8617/"
+                    target="_blank">UC-2b31694b-781a-4ee0-bbc2-9cc3fe8c861f</a></li>
+              </ul>
+            </div>
             <div class="resume-item">
               <h4>Networking Basics</h4>
               <h5>1 week - 2024</h5>
@@ -567,7 +527,6 @@
                     target="_blank">UC-24764ca7-fcaf-43e9-915e-6ad34288ab06</a></li>
               </ul>
             </div>
-
             <div class="resume-item">
               <h4>Beginning C++ Programming - From Beginner to Beyond </h4>
               <h5>(46 hours) – 2024</h5>
@@ -577,8 +536,7 @@
                     href="https://udemy-certificate.s3.amazonaws.com/image/UC-2619a400-5b50-4769-a8de-c2071ac5092a.jpg"
                     target="_blank">UC-2619a400-5b50-4769-a8de-c2071ac5092a</a></li>
               </ul>
-            </div>
-            
+            </div> 
             <div class="resume-item">
               <h4>Responsive Real-World Websites with HTML and CSS</h4>
               <h5>(37.5 Hours) - 2024</h5>
@@ -589,21 +547,16 @@
                     href="https://www.udemy.com/certificate/UC-24764ca7-fcaf-43e9-915e-6ad34288ab06/"
                     target="_blank">UC-24764ca7-fcaf-43e9-915e-6ad34288ab06</a></li>
               </ul>
-            </div>
-            
+            </div>  
           </div>
         </div>
-
       </div>
     </section><!-- End Resume Section -->
-
     <h4 id="scrollspyHeading4">Skills</h4>
     <p><!-- ======= Skills Section ======= -->
       <section id="skills" class="skills section-bg">
         <div class="container">
-
           </div>
-  
           <div class="row skills-content">
   
             <div class="col-lg-6" data-aos="fade-up">
@@ -615,7 +568,6 @@
                   </div>
                 </div>
               </div>
-  
               <div class="progress">
                 <span class="skill">CSS <i class="val">80%</i></span>
                 <div class="progress-bar-wrap">
@@ -623,7 +575,6 @@
                   </div>
                 </div>
               </div>
-  
               <div class="progress">
                 <span class="skill">JavaScript <i class="val">55%</i></span>
                 <div class="progress-bar-wrap"5></div>
@@ -631,13 +582,8 @@
                   </div>
                 </div>
               </div>
-  
-              
-  
             </div>
-  
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-  
               <div class="progress">
                 <span class="skill">Python<i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
@@ -645,7 +591,6 @@
                   </div>
                 </div>
               </div>
-  
               <div class="progress">
                 <span class="skill">Django<i class="val">60%</i></span>
                 <div class="progress-bar-wrap">
@@ -653,7 +598,6 @@
                   </div>
                 </div>
               </div>
-  
               <div class="progress">
                 <span class="skill">Mysql<i class="val">65%</i></span>
                 <div class="progress-bar-wrap">
@@ -669,68 +613,13 @@
                   </div>
                 </div>
               </div>
-  
             </div>
-  
-          </div>
-          
-  
+          </div> 
           </div>
   
         </div>
       </section><!-- End Skills Section --></p>
-      
-<!-- ======= Services Section ======= -->
-        <h4 id="scrollspyHeading5">Services</h4>
-        
-    <section id="services" class="services">
-      <div class="container">
-
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="fa-solid fa-code"></i></i></div>
-            <h3 class="title"><a rel="noopener" href="#portfolio">Web Development</a></h3>
-            <p class="description">A passion for knowledge. Ability to plan for
-              everything. Great debugging skills. “Accelerated Failure” Mentality.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-            <h3 class="title"><a rel="noopener" href="#portfolio">Responsive Design</a></h3>
-            <p class="description">Less Effort.
-              Smooth User Experience. User Friendly website. Mobile Segment. Search Engine
-              Optimization (SEO) .</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="icofont-earth"></i></div>
-            <h3 class="title"><a rel="noopener" href="#portfolio">Creative Look</a></h3>
-            <p class="description">Accessible to All Users. Well Planned Information Architecture. Fast Load Times.
-              Effective Navigation.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="icofont-image"></i></div>
-            <h3 class="title"><a rel="noopener" href="#portfolio">Clean Code</a></h3>
-            <p class="description">Understandable and readable code, Always following updated structure, simple and
-              focused.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="icofont-settings"></i></div>
-            <h3 class="title"><a rel="noopener" href="#portfolio">Fast Support</a></h3>
-            <p class="description">I am available except from 12 PM to 8 PM (GMT +6) Bangladesh time. Services can be
-              provided 7 days in a week.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="icofont-tasks-alt"></i></div>
-            <h4 class="title"><a rel="noopener" href="#portfolio">Branding Identity</a></h4>
-            <p class="description"> Well-Formatted Content That Is Easy to Scan, Contrasting
-              Color Scheme which make your brand unique and desired.</p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
+    
         <h4 id="scrollspyHeading6">Get in Touch</h4>
       <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -834,7 +723,6 @@
         version: 'v10.0'
       });
     };
-
     (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
@@ -848,7 +736,6 @@
 <script>
   !(function($) {
     "use strict";
-  
     // Hero typed
     if ($('.typed').length) {
       var typed_strings = $(".typed").data('typed-items');
@@ -1033,10 +920,6 @@
     });
   
   })(jQuery);
-  
-  
-
-  
 </script>
 </body>
 </html>
